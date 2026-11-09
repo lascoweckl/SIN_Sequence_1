@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercice – Redessiner les circuits</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 11pt;
+        margin: 30px;
+        color: #000;
+        background: #fff;
+    }
+
+    .consigne {
+        border: 1px solid #999;
+        padding: 14px 18px;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+
+    .grille {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 35px;
+        align-items: start;
+    }
+
+    .exercice {
+        text-align: center;
+        break-inside: avoid;
+    }
+
+    .numero {
+        font-weight: bold;
+        font-size: 14pt;
+        margin-bottom: 8px;
+    }
+
+    .exercice img {
+        width: 100%;
+        max-width: 500px;
+        height: 330px;
+        object-fit: contain;
+        border: none;
+    }
+
+    @media print {
+        body { margin: 15mm; }
+        .grille { gap: 18px 25px; }
+        .exercice img { height: 250px; }
+    }
+</style>
+</head>
+<body>
+
+<div class="consigne">
+    <strong>Exercice :</strong><br>
+    À partir de dessins existants, les redessiner en ne mettant que des lignes verticales et horizontales.<br>
+    Flécher les grandeurs physiques : <span style="color:green;"><strong>tensions (en vert)</strong></span>
+    et <span style="color:red;"><strong>courants (en rouge)</strong></span>.
+</div>
+
+<div class="grille">
+
+    <div class="exercice">
+        <div class="numero">1</div>
+        <img src="images/Im1.png" alt="Circuit 1">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">2</div>
+        <img src="images/Im2.png" alt="Circuit 2">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">3</div>
+        <img src="images/Im3.png" alt="Circuit 3">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">4</div>
+        <img src="images/Im4.png" alt="Circuit 4">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">5</div>
+        <img src="images/Im5.png" alt="Circuit 5">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">6</div>
+        <img src="images/Im6.png" alt="Circuit 6">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">7</div>
+        <img src="images/Im7.png" alt="Circuit 7">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">8</div>
+        <img src="images/Im8.png" alt="Circuit 8">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">9</div>
+        <img src="images/Im9.png" alt="Circuit 9">
+    </div>
+
+    <div class="exercice">
+        <div class="numero">10</div>
+        <img src="images/Im10.png" alt="Circuit 10">
+    </div>
+
+</div>
+
+<center><a href="séance_1.html">RETOUR</a></center>
+
+</body>
+</html>

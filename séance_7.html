@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Séance 7 - Synthèse et mini-projet voltmètre</title>
+
+<style>
+
+@page{
+    size:A4;
+    margin:15mm;
+}
+
+body{
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#eceff3;
+    margin:0;
+    padding:30px;
+}
+
+.page{
+    width:210mm;
+    min-height:297mm;
+    margin:auto;
+    background:white;
+    padding:25mm;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+header{
+    background:#0b5394;
+    color:white;
+    padding:18px;
+    border-radius:8px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header h2{
+    margin-top:5px;
+    font-size:20px;
+    font-weight:normal;
+}
+
+.objectif{
+    background:#d9edf7;
+    border-left:8px solid #2980b9;
+    padding:15px;
+    margin-top:25px;
+    border-radius:5px;
+}
+
+.situation{
+    background:#fff3cd;
+    border-left:8px solid #ffc107;
+    padding:15px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section h2{
+    color:#0b5394;
+    border-bottom:3px solid #0b5394;
+    padding-bottom:5px;
+}
+
+.formule{
+    background:#f7f7f7;
+    border:2px solid #0b5394;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.exercice{
+    background:#f5f5f5;
+    border-left:6px solid #27ae60;
+    padding:15px;
+    margin-top:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#0b5394;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.synthese{
+    margin-top:35px;
+    background:#e8f5e9;
+    padding:20px;
+    border-left:8px solid #2e7d32;
+    border-radius:5px;
+}
+
+.formulaire{
+    margin-top:30px;
+    background:#e3f2fd;
+    padding:20px;
+    border-radius:5px;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    font-size:12px;
+    color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+
+<h1>STI2D – Terminale SIN</h1>
+
+<h2>Séquence 1 – Électricité</h2>
+
+<h1>Séance 7 : Synthèse et mini-projet voltmètre</h1>
+
+<h2>Application des notions étudiées</h2>
+
+</header>
+
+<div class="objectif">
+
+<h3>🎯 Objectif</h3>
+
+<p>
+Réinvestir toutes les notions étudiées (loi d'Ohm, puissance, résistances équivalentes, pont diviseur et code couleur) dans un mini-projet de voltmètre numérique.
+</p>
+
+</div>
+
+<div class="situation">
+
+<h3>🔍 Situation problème</h3>
+
+<p>
+
+Comment concevoir un voltmètre capable de mesurer jusqu'à 10 V alors que l'entrée d'un CAN est limitée à 5 V ?
+
+</p>
+
+<p><b>Schéma général du voltmètre à insérer ici.</b></p>
+
+</div>
+
+<div class="section">
+
+<h2>1. Quiz de révision</h2>
+
+<table>
+
+<tr>
+<th>Question</th>
+<th>Réponse</th>
+</tr>
+
+<tr>
+<td>Loi d'Ohm</td>
+<td>U = ?</td>
+</tr>
+
+<tr>
+<td>Puissance</td>
+<td>P = ?</td>
+</tr>
+
+<tr>
+<td>Résistances en série</td>
+<td>Req = ?</td>
+</tr>
+
+<tr>
+<td>Résistances en parallèle</td>
+<td>1 / Req = ?</td>
+</tr>
+
+<tr>
+<td>Pont diviseur</td>
+<td>VA = ?</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>2. Application : circuit DEL</h2>
+
+<center><img src="images/montage_1.png" alt="Circuit 1" /></center>
+<div class="exercice">
+
+Pile 9 V + DEL + résistance de 330 Ω
+
+<br><br>
+
+Calculer le courant dans le circuit.
+
+</div>
+
+<div class="exercice">
+
+Calculer la puissance dissipée dans la résistance.
+
+</div>
+
+<div class="exercice">
+
+Choisir le code couleur de la résistance pour un courant de 20 mA.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>3. Mini-projet : voltmètre numérique</h2>
+
+<p>
+
+Principe :
+
+</p>
+
+<ul>
+
+<li>Alimentation Vcc</li>
+
+<li>Pont diviseur de tension</li>
+
+<li>Entrée CAN</li>
+
+<li>Affichage 7 segments</li>
+
+</ul>
+
+<center><img src="images/voltmètre.png" style="height:300px; width:auto;" alt="voltmètre" /></center>
+<center><img src="images/can.png" style="height:300px; width:auto;" alt="can" /></center>
+
+<h3>Exercice</h3>
+
+<div class="exercice">
+
+Vcc = 10 V
+
+<br>
+
+R1 = 10 kΩ
+
+<br>
+
+VA = 5 V
+
+<br><br>
+
+Déterminer R2.
+
+</div>
+
+<div class="formule">
+
+VA = Vcc × R2 / (R1 + R2)
+
+</div>
+
+<div class="exercice">
+
+Choisir ensuite la valeur normalisée et son code couleur.
+
+</div>
+
+<h3>Afficheur 7 segments</h3>
+
+<p><b>Image d'un afficheur à insérer ici.</b></p>
+
+<div class="exercice">
+
+Chaque segment est une DEL.
+
+<br><br>
+
+Calculer la résistance de protection pour :
+
+<ul>
+
+<li>Alimentation : 5 V</li>
+
+<li>DEL : 2 V</li>
+
+<li>Courant : 15 mA</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>4. Préparation du projet de Terminale</h2>
+
+<p>
+
+Le voltmètre numérique servira de fil rouge pour le projet SIN de Terminale.
+
+</p>
+
+<ul>
+
+<li>Loi d'Ohm</li>
+<li>Puissance</li>
+<li>Résistance équivalente</li>
+<li>Pont diviseur</li>
+<li>Code couleur</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>Méthode de résolution</h2>
+
+<div class="exercice">
+
+Toujours suivre les étapes :
+
+<ol>
+
+<li>Écrire la formule.</li>
+
+<li>Remplacer par les valeurs.</li>
+
+<li>Calculer.</li>
+
+<li>Vérifier les unités.</li>
+
+<li>Choisir le composant adapté.</li>
+
+</ol>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Récapitulatif des séances</h2>
+
+<table>
+
+<tr>
+
+<th>Séance</th>
+<th>Notions principales</th>
+<th>Calculs</th>
+
+</tr>
+
+<tr>
+
+<td>1</td>
+<td>Loi d'Ohm - Puissance</td>
+<td>U, I, R, P</td>
+
+</tr>
+
+<tr>
+
+<td>2</td>
+<td>Résistances équivalentes</td>
+<td>Req, Itotal</td>
+
+</tr>
+
+<tr>
+
+<td>3</td>
+<td>Pont diviseur</td>
+<td>VA, partage du courant</td>
+
+</tr>
+
+<tr>
+
+<td>4</td>
+<td>Code couleur</td>
+<td>Valeur ↔ Couleurs</td>
+
+</tr>
+
+<tr>
+
+<td>5</td>
+<td>Synthèse + Voltmètre</td>
+<td>Dimensionnement complet</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="synthese">
+
+<h2>📋 Synthèse</h2>
+
+<ul>
+
+<li>Les notions étudiées permettent de dimensionner un circuit simple.</li>
+
+<li>Le pont diviseur adapte une tension à un CAN.</li>
+
+<li>Chaque DEL doit être protégée par une résistance.</li>
+
+<li>Le choix des composants est une étape essentielle de la conception électronique.</li>
+
+</ul>
+
+</div>
+
+<div class="formulaire">
+
+<h2>📌 À retenir</h2>
+
+<ul>
+
+<li>U = R × I</li>
+
+<li>P = U × I</li>
+
+<li>Req série = R1 + R2 + ...</li>
+
+<li>1 / Req parallèle = 1/R1 + 1/R2 + ...</li>
+
+<li>VA = Vcc × R2 / (R1 + R2)</li>
+
+</ul>
+
+</div>
+<center>
+<center>
+<a href="séance_6.html">RETOUR</a>
+<a href="séance_8.html">SUIVANT</a>
+</br>
+<a href="index.html">SOMMAIRE</a>
+</center>
+</center>
+<footer>
+
+Terminale STI2D SIN • Séquence 1 • Séance 5
+
+</footer>
+
+</div>
+
+</body>
+</html>

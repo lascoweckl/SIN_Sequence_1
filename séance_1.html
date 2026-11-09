@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Séance 1 - Loi d'Ohm et puissance</title>
+
+<style>
+
+@page{
+    size:A4;
+    margin:15mm;
+}
+
+body{
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#eceff3;
+    margin:0;
+    padding:30px;
+}
+
+.page{
+    width:210mm;
+    min-height:297mm;
+    margin:auto;
+    background:white;
+    padding:25mm;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+header{
+    background:#0b5394;
+    color:white;
+    padding:18px;
+    border-radius:8px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header h2{
+    margin-top:5px;
+    font-size:20px;
+    font-weight:normal;
+}
+
+.objectif{
+    background:#d9edf7;
+    border-left:8px solid #2980b9;
+    padding:15px;
+    margin-top:25px;
+    border-radius:5px;
+}
+
+.situation{
+    background:#fff3cd;
+    border-left:8px solid #ffc107;
+    padding:15px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section h2{
+    color:#0b5394;
+    border-bottom:3px solid #0b5394;
+    padding-bottom:5px;
+}
+
+.formule{
+    background:#f7f7f7;
+    border:2px solid #0b5394;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.exercice{
+    background:#f5f5f5;
+    border-left:6px solid #27ae60;
+    padding:15px;
+    margin-top:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#0b5394;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.synthese{
+    margin-top:35px;
+    background:#e8f5e9;
+    padding:20px;
+    border-left:8px solid #2e7d32;
+    border-radius:5px;
+}
+
+.formulaire{
+    margin-top:30px;
+    background:#e3f2fd;
+    padding:20px;
+    border-radius:5px;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    font-size:12px;
+    color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+
+<h1>STI2D – Terminale SIN</h1>
+
+<h2>Séquence 1 – Électricité</h2>
+
+<h1>Séance 1 : Circuit lampe</h1>
+
+<h2>Loi d'Ohm et puissance</h2>
+
+</header>
+
+<div class="objectif">
+
+<h3>🎯 Objectif</h3>
+
+<p>
+Découvrir la loi d'Ohm et la puissance électrique à travers un circuit simple comportant une pile, une résistance et une DEL.
+</p>
+
+</div>
+
+<div class="situation">
+
+<h3>🔍 Situation problème</h3>
+
+<p>
+
+Pourquoi une DEL doit-elle toujours être associée à une résistance ?
+
+</p>
+
+<center><img src="images/montage_1.png" alt="Circuit 1" /></center>
+
+</div>
+
+<div class="section">
+
+<h2>1. Mise en situation</h2>
+
+<ul>
+
+<li>Pile 9 V</li>
+<li>Interrupteur</li>
+<li>Résistance</li>
+<li>DEL</li>
+
+</ul>
+
+<div class="exercice">
+
+Question :
+
+<br><br>
+
+Pourquoi ajoute-t-on une résistance en série avec une DEL ?
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>2. Loi d'Ohm</h2>
+
+<p>Relation entre la tension, la résistance et le courant.</p>
+
+<div class="formule">
+
+<img src="images/Loi_d'Ohm.png" alt="Loi d'Ohm" />
+
+
+
+</div>
+
+<p>
+
+avec :
+
+</p>
+
+<ul>
+
+<li>U en Volt (V)</li>
+<li>R en Ohm (Ω)</li>
+<li>I en Ampère (A)</li>
+
+</ul>
+
+<h3>Formules à connaître</h3>
+
+<div class="formule">
+
+<img src="images/triangle_URI.png" style="height:200px; width:auto;" alt="triangle_URI" />
+
+</div>
+
+<div class="formule">
+
+<img src="images/Loi_d'Ohm_suite.png" style="height:200px; width:auto;" alt="Loi d'Ohm suite" />
+
+</div>
+
+<p>
+
+Bilan :
+
+</p>
+
+<ul>
+
+<li>U = R x I</li>
+<li>I = U / R</li>
+<li>R = U / I</li>
+
+</ul>
+
+<h3>Exercices 1ère Série</h3>
+
+<a href="exercice_circuits.html">Exercice 1ère Série</a>
+
+<h3>Exercices 2ème Série</h3>
+
+<a href="exercice_loi_ohm.html">Exercice 2ème Série</a>
+
+<h2>3. Puissance électrique</h2>
+
+<p>La puissance dissipée dans une résistance se calcule par :</p>
+
+<div class="formule">
+
+P = U × I
+
+</div>
+
+<p>En utilisant la loi d'Ohm :</p>
+
+<div class="formule">
+
+P = R × I²
+
+</div>
+
+<div class="formule">
+
+P = U² / R
+
+</div>
+
+<h3>Exercices</h3>
+
+<div class="exercice">
+
+Reprendre les exercices précédents et calculer la puissance dissipée.
+
+</div>
+
+<div class="exercice">
+
+Quelle puissance minimale doit supporter la résistance ?
+
+<ul>
+
+<li>1/4 W</li>
+
+<li>1/2 W</li>
+
+<li>1 W</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>4. Conclusion</h2>
+
+<p>
+
+La résistance protège la DEL en limitant le courant qui la traverse.
+
+</p>
+
+</div>
+
+<div class="synthese">
+
+<h2>📋 Synthèse</h2>
+
+<ul>
+
+<li>La loi d'Ohm relie U, R et I.</li>
+
+<li>La puissance permet de choisir correctement une résistance.</li>
+
+<li>Une DEL doit toujours être protégée par une résistance.</li>
+
+</ul>
+
+</div>
+
+<div class="formulaire">
+
+<h2>📌 À retenir</h2>
+
+<ul>
+
+<li>U = R × I</li>
+
+<li>I = U / R</li>
+
+<li>R = U / I</li>
+
+<li>P = U × I</li>
+
+<li>P = R × I²</li>
+
+<li>P = U² / R</li>
+
+<li>1 A = 1000 mA</li>
+
+<li>1000 Ω = 1 kΩ</li>
+
+</ul>
+
+</div>
+<center>
+<a href="index.html">RETOUR</a>
+<a href="séance_2.html">SUIVANT</a>
+</center>
+<footer>
+
+Terminale STI2D SIN • Séquence 1 • Séance 1
+
+</footer>
+
+</div>
+
+</body>
+</html>

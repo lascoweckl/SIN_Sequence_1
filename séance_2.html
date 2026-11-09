@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Séance 2 - Résistances équivalentes</title>
+
+<style>
+
+@page{
+    size:A4;
+    margin:15mm;
+}
+
+body{
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#eceff3;
+    margin:0;
+    padding:30px;
+}
+
+.page{
+    width:210mm;
+    min-height:297mm;
+    margin:auto;
+    background:white;
+    padding:25mm;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+header{
+    background:#0b5394;
+    color:white;
+    padding:18px;
+    border-radius:8px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header h2{
+    margin-top:5px;
+    font-size:20px;
+    font-weight:normal;
+}
+
+.objectif{
+    background:#d9edf7;
+    border-left:8px solid #2980b9;
+    padding:15px;
+    margin-top:25px;
+    border-radius:5px;
+}
+
+.situation{
+    background:#fff3cd;
+    border-left:8px solid #ffc107;
+    padding:15px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section h2{
+    color:#0b5394;
+    border-bottom:3px solid #0b5394;
+    padding-bottom:5px;
+}
+
+.formule{
+
+    background:#f7f7f7;
+    border:2px solid #0b5394;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+    font-size:24px;
+    font-weight:bold;
+    margin:20px 0;
+
+}
+
+.exercice{
+
+    background:#f5f5f5;
+    border-left:6px solid #27ae60;
+    padding:15px;
+    margin-top:15px;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+
+}
+
+th{
+
+background:#0b5394;
+color:white;
+padding:10px;
+
+}
+
+td{
+
+border:1px solid #ccc;
+padding:10px;
+
+}
+
+.synthese{
+
+margin-top:35px;
+background:#e8f5e9;
+padding:20px;
+border-left:8px solid #2e7d32;
+border-radius:5px;
+
+}
+
+.formulaire{
+
+margin-top:30px;
+background:#e3f2fd;
+padding:20px;
+border-radius:5px;
+
+}
+
+footer{
+
+margin-top:40px;
+text-align:center;
+font-size:12px;
+color:#777;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+
+<h1>STI2D – Terminale SIN</h1>
+
+<h2>Séquence 1 – Électricité</h2>
+
+<h1>Séance 2 : Résistances équivalentes</h1>
+
+<h2>Associations série et parallèle</h2>
+
+</header>
+
+<div class="objectif">
+
+<h3>🎯 Objectif</h3>
+
+<p>
+Maîtriser les associations de résistances et calculer la résistance équivalente d'un circuit.
+</p>
+
+</div>
+
+<div class="situation">
+
+<h3>🔍 Situation problème</h3>
+
+<p>
+
+Les montages électroniques utilisent très souvent plusieurs résistances.
+Comment peut-on remplacer plusieurs résistances par une seule résistance équivalente afin de simplifier les calculs ?
+
+</p>
+
+<img src="images/res_equ_serie_ou_parallele.png" style="height:200px; width:auto;" alt="res_equ_serie_ou_parallele" />
+
+</div>
+
+<div class="section">
+
+<h2>1. Rappel rapide</h2>
+
+<ul>
+
+<li>Loi d'Ohm</li>
+
+<li>Puissance électrique</li>
+
+<li>1 à 2 exercices rapides</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>2. Résistances en série</h2>
+
+<p>Lorsque plusieurs résistances sont montées en série, leurs valeurs s'additionnent.</p>
+
+<div class="formule">
+
+Req = R1 + R2 + ... + Rn
+
+</div>
+
+<h3>Exercices</h3>
+
+<div class="exercice">
+
+330 Ω + 470 Ω → Calculer Req
+
+</div>
+
+<div class="exercice">
+
+100 Ω + 220 Ω + 470 Ω → Calculer Req
+
+</div>
+
+<div class="exercice">
+
+Avec U = 9 V, calculer le courant du circuit.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>3. Résistances en parallèle</h2>
+
+<p>Pour un montage en parallèle, on additionne les inverses.</p>
+
+<div class="formule">
+
+1 / Req = 1/R1 + 1/R2 + ... + 1/Rn
+
+</div>
+
+<p>Cas particulier de deux résistances :</p>
+
+<div class="formule">
+
+Req = (R1 × R2) / (R1 + R2)
+
+</div>
+
+<h3>Exercices</h3>
+
+<div class="exercice">
+
+330 Ω et 330 Ω
+
+</div>
+
+<div class="exercice">
+
+330 Ω et 660 Ω
+
+</div>
+
+<div class="exercice">
+
+220 Ω, 470 Ω et 1 kΩ
+
+</div>
+
+<div class="exercice">
+
+Avec U = 9 V, calculer Itotal puis I1 et I2.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>4. Cas mixte série – parallèle</h2>
+
+<p>
+
+Schéma :
+
+<b>R1 en série avec (R2 // R3)</b>
+
+</p>
+
+<img src="images/res_equ_mixte.png" style="height:200px; width:auto;" alt="res_equ_mixte" />
+
+<table>
+
+<tr>
+
+<th>Étapes</th>
+
+<th>Calcul</th>
+
+</tr>
+
+<tr>
+
+<td>Réduire le parallèle</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Ajouter la résistance série</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Calculer Itotal</td>
+
+<td></td>
+
+</tr>
+
+<tr>
+
+<td>Calculer I2 et I3</td>
+
+<td></td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="synthese">
+
+<h2>📋 Synthèse</h2>
+
+<ul>
+
+<li>En série, les résistances s'additionnent.</li>
+
+<li>En parallèle, on additionne les inverses.</li>
+
+<li>Toujours simplifier le circuit avant d'appliquer la loi d'Ohm.</li>
+
+<li>Terminer par le calcul des courants dans chaque branche.</li>
+
+</ul>
+
+</div>
+
+<div class="formulaire">
+
+<h2>📌 Formulaire</h2>
+
+<ul>
+
+<li>Req = R1 + R2 + ... + Rn</li>
+
+<li>1/Req = 1/R1 + 1/R2 + ... + 1/Rn</li>
+
+<li>Cas particulier avec 2 résistances : Req = (R1 × R2)/(R1 + R2)</li>
+
+<li>U = R × I</li>
+
+</ul>
+
+</div>
+<center>
+<a href="séance_1.html">RETOUR</a>
+<a href="séance_3.html">SUIVANT</a>
+</br>
+<a href="index.html">SOMMAIRE</a>
+</center>
+<footer>
+
+Terminale STI2D SIN • Séquence 1 • Séance 2
+
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Séance 3 – TP Résistance et DEL</title>
+<style>
+
+@page{
+    size:A4;
+    margin:15mm;
+}
+
+body{
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#eceff3;
+    margin:0;
+    padding:30px;
+}
+
+.page{
+    width:210mm;
+    min-height:297mm;
+    margin:auto;
+    background:white;
+    padding:25mm;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+header{
+    background:#0b5394;
+    color:white;
+    padding:18px;
+    border-radius:8px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header h2{
+    margin-top:5px;
+    font-size:20px;
+    font-weight:normal;
+}
+
+.objectif{
+    background:#d9edf7;
+    border-left:8px solid #2980b9;
+    padding:15px;
+    margin-top:25px;
+    border-radius:5px;
+}
+
+.situation{
+    background:#fff3cd;
+    border-left:8px solid #ffc107;
+    padding:15px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section h2{
+    color:#0b5394;
+    border-bottom:3px solid #0b5394;
+    padding-bottom:5px;
+}
+
+.formule{
+    background:#f7f7f7;
+    border:2px solid #0b5394;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.exercice{
+    background:#f5f5f5;
+    border-left:6px solid #27ae60;
+    padding:15px;
+    margin-top:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#0b5394;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.synthese{
+    margin-top:35px;
+    background:#e8f5e9;
+    padding:20px;
+    border-left:8px solid #2e7d32;
+    border-radius:5px;
+}
+
+.formulaire{
+    margin-top:30px;
+    background:#e3f2fd;
+    padding:20px;
+    border-radius:5px;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    font-size:12px;
+    color:#777;
+}
+
+
+.page{height:auto;min-height:297mm} .page img{max-width:100%;height:auto} .section p{line-height:1.55} .question{background:#f5f5f5;border-left:6px solid #27ae60;padding:12px 15px;margin:15px 0} .reponse{min-height:24px;border-bottom:1px dotted #aaa;margin:7px 0} .navigation{display:flex;justify-content:space-between;gap:12px;margin-top:32px;flex-wrap:wrap} .navigation a{background:#0b5394;color:white;padding:10px 14px;border-radius:5px;text-decoration:none} .navigation a:hover{background:#083c6c} .materiel{background:#f1f5f9;padding:15px;border-left:8px solid #64748b;margin-top:20px;border-radius:5px} .consigne{background:#fff3cd;padding:15px;border-left:8px solid #ffc107;margin:18px 0} .table-wrap{overflow-x:auto} td,th{vertical-align:top} td p,th p{margin:0 0 5px} @media(max-width:850px){body{padding:0}.page{width:100%;padding:20px;box-shadow:none}} @media print{body{background:white;padding:0}.page{box-shadow:none;width:auto;padding:0;min-height:0}.navigation{display:none}.question,.objectif,.situation,.formule,.synthese{break-inside:avoid}}</style>
+</head>
+<body>
+<div class="page">
+<header><h1>STI2D – Terminale SIN</h1><h2>Séquence 1 – Électricité</h2><h1>TP : Résistance et DEL</h1><h2>Protection d’une DEL et dimensionnement d’une résistance</h2></header>
+<div class="situation"><p><b>🔍 PROBLÉMATIQUE</b></p></div>
+<p>Comment choisir la résistance
+  associée à une DEL pour obtenir la luminosité souhaitée tout en protégeant
+  les composants du circuit ?</p>
+<div class="objectif"><p><b>🎯 Objectifs du TP</b></p></div>
+<p>• Exploiter une documentation
+  constructeur (datasheet).<br>
+  • Mettre en évidence le rôle d’une résistance de limitation de courant.<br>
+  • Mesurer des tensions et un courant dans un circuit continu.<br>
+  • Dimensionner la valeur d’une résistance associée à une DEL.<br>
+  • Vérifier la puissance dissipée par une résistance et comprendre sa
+  puissance nominale.</p>
+<div class="materiel"><p><b>🧰 Matériel</b></p></div>
+<p>Par binôme : alimentation
+  stabilisée, plaque d’essai, DEL rouge 3 mm, résistances 1 kΩ / 680
+  Ω / 470 Ω / 390 Ω (¼ W), multimètre et cordons.<br>
+  Document ressource : datasheet d’une DEL rouge 3 mm fournie par le
+  professeur.</p>
+<section class="section">
+<h2><b>1. Exploitation de la documentation
+constructeur</b></h2>
+<p>Une DEL (diode électroluminescente) est un
+composant polarisé. Avant de l’utiliser, il est nécessaire de consulter sa
+documentation constructeur.</p>
+<div class="question"><b>Q1. Sur la DEL réelle,
+  identifier l’anode et la cathode. Indiquer les éléments physiques permettant
+  de les reconnaître.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q2.
+À partir de la datasheet, relever les caractéristiques suivantes :</b></div>
+<div class="table-wrap"><table><tr><th><p><b>Grandeur</b></p></th><th><p><b>Symbole</b></p></th><th><p><b>Valeur relevée</b></p></th></tr><tr><td><p>Tension
+  directe</p></td><td><p>Vᶠ</p></td><td></td></tr><tr><td><p>Courant direct
+  de référence</p></td><td><p>Iᶠ</p></td><td></td></tr><tr><td><p>Courant direct
+  maximal</p></td><td><p>Iᶠ max</p></td><td></td></tr></table></div>
+<div class="question"><b>Q3. Peut-on raccorder
+  directement cette DEL aux bornes d’une alimentation de 9 V ? Justifier à
+  partir de la documentation constructeur.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+</section>
+<section class="section">
+<h2><b>2. Influence de la résistance sur le courant et
+la luminosité</b></h2>
+<h3><b>⚠ CONSIGNE DE SÉCURITÉ</b></h3>
+<p>Ne jamais modifier le montage
+  lorsque l’alimentation est sous tension. Faire vérifier le câblage avant la
+  première mise sous tension.</p>
+<h3><b>2.1 Montage
+expérimental</b></h3>
+<p>Réaliser le circuit série suivant :</p>
+<h3><b><br>
+  SCHÉMA DU MONTAGE<br>
+<img src="images/TP1_image_1.png" alt="TP1_image_1">
+<br>
+[if !supportLineBreakNewLine]<br>
+[endif]</b></h3>
+<p>L’ampèremètre doit être placé en série. Le
+voltmètre est branché en dérivation aux bornes du composant dont on souhaite
+mesurer la tension.</p>
+<div class="question"><b>Q4.
+Commencer avec R = 1 kΩ. Après validation du montage par le professeur,
+mettre sous tension et relever les grandeurs demandées. Recommencer avec les
+autres résistances.</b></div>
+<div class="table-wrap"><table><tr><th><p><b>R</b></p></th><th><p><b>UDEL</b></p></th><th><p><b>UR</b></p></th><th><p><b>IDEL</b></p></th><th><p><b>Luminosité observée</b></p></th></tr><tr><td><p>1 kΩ</p></td><td></td><td></td><td></td><td></td></tr><tr><td><p>680 Ω</p></td><td></td><td></td><td></td><td></td></tr><tr><td><p>470 Ω</p></td><td></td><td></td><td></td><td></td></tr><tr><td><p>390 Ω</p></td><td></td><td></td><td></td><td></td></tr></table></div>
+<div class="question"><b>Q5. Vérifier expérimentalement
+  la loi des mailles pour une des mesures réalisées.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q6. Lorsque la valeur de la
+  résistance diminue, comment évolue le courant traversant la DEL ?</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q7. Comment évolue alors la
+  luminosité de la DEL ?</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q8. Déduire de vos observations
+  le rôle de la résistance placée en série avec la DEL.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+</section>
+<section class="section">
+<h2><b>3. Dimensionnement de la résistance de
+protection</b></h2>
+<p>On souhaite alimenter la DEL sous 9 V avec
+un courant de fonctionnement de 20 mA. Utiliser la valeur de Vᶠ relevée
+dans la datasheet.</p>
+<div class="question"><b>Q9. Écrire la loi des mailles et
+  déterminer la tension Uᴿ aux bornes de la résistance.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q10. À l’aide de la loi d’Ohm,
+  calculer la valeur théorique R nécessaire.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q11. La valeur calculée n’étant
+  pas nécessairement une valeur normalisée, choisir entre 330 Ω et 390
+  Ω la résistance qui privilégie la protection de la DEL. Justifier.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+</section>
+<section class="section">
+<h2><b>4. Choisir une résistance : la valeur en ohms
+suffit-elle ?</b></h2>
+<p><b>🔍 SITUATION</b></p>
+<p>Vous avez déterminé la valeur de
+  la résistance. Le choix du composant est-il pour autant terminé ?</p>
+<p>On peut trouver des résistances de même
+valeur, par exemple 390 Ω, mais de puissances nominales différentes : 0,25
+W ; 0,5 W ; 1 W ; 2 W.</p>
+<div class="question"><b>Q12. Pourquoi des résistances de
+  même valeur en ohms peuvent-elles avoir des dimensions différentes ? Formuler
+  une hypothèse.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<p><b>P
+  = U × IouP = R × I²ouP = U² / R</b></p>
+<div class="question"><b>Q13. À partir du courant mesuré
+  avec la résistance de 390 Ω, calculer la puissance réellement dissipée
+  par celle-ci.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q14. Une résistance de 390
+  Ω – 0,25 W est-elle correctement dimensionnée dans le fonctionnement
+  normal du montage ? Justifier.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+</section>
+<section class="section">
+<h2><b>5. Étude expérimentale d’une surcharge</b></h2>
+<h3><b>⚠ MANIPULATION ENCADRÉE</b></h3>
+<p>Cette expérience est réalisée
+  sous le contrôle du professeur. La résistance peut fortement chauffer et se
+  dégrader. Ne pas toucher le composant pendant l’essai ni immédiatement après
+  la coupure de l’alimentation. Respecter la zone de sécurité indiquée.</p>
+<p>Dans cette partie, la DEL est retirée. Une
+résistance ¼ W dédiée à l’expérience est volontairement soumise à une puissance
+supérieure à sa puissance nominale afin d’observer les conséquences d’un
+mauvais dimensionnement.</p>
+<div class="question"><b>Q15. Avant l’essai, mesurer à
+  l’ohmmètre la valeur de la résistance.<br>
+<br>
+  Ravant = ........................................ Ω</b></div>
+<div class="reponse"></div>
+<div class="question"><b>Q16. À partir de la tension et
+  de la résistance indiquées par le professeur, calculer le courant théorique
+  puis la puissance que devra dissiper la résistance.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q17. Comparer cette puissance à
+  la puissance nominale de 0,25 W. Formuler une hypothèse sur ce qui va se
+  produire.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<p><b>Observation pendant l’expérience
+  :</b></p>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q18. Après coupure de
+  l’alimentation et refroidissement complet, mesurer à nouveau la résistance et
+  décrire son état.<br>
+<br>
+  Raprès = ........................................ Ω</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="question"><b>Q19. Expliquer la dégradation
+  observée en utilisant la notion de puissance électrique.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+</section>
+<section class="section">
+<h2><b>6. Synthèse</b></h2>
+<p><b>📋 Synthèse</b></p>
+<p>Compléter les phrases suivantes
+  :<br>
+<br>
+  Une DEL doit être protégée contre un courant trop
+  ....................................................<br>
+  La résistance placée en série avec la DEL permet de
+  .................................................... le courant.<br>
+  La valeur d’une résistance s’exprime en
+  ....................................................<br>
+  Sa puissance nominale s’exprime en
+  ....................................................</p>
+<div class="question"><b>Q20. Un élève affirme : « J’ai
+  calculé qu’il me faut une résistance de 390 Ω, donc je peux prendre
+  n’importe quelle résistance de 390 Ω. » Expliquer précisément pourquoi
+  cette affirmation est incomplète.</b></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<div class="reponse"></div>
+<p><b>📌 À RETENIR</b></p>
+<p>Le choix d’une résistance ne
+  dépend pas uniquement de sa valeur en ohms. Il faut également vérifier que sa
+  puissance nominale est supérieure à la puissance qu’elle devra dissiper dans
+  le circuit.</p>
+</section>
+<center>
+<a href="séance_2.html">PRÉCÉDENT</a>
+<a href="séance_4.html">SUIVANT</a>
+</br>
+<a href="index.html">SOMMAIRE</a>
+</center>
+<footer>Terminale STI2D SIN • Séquence 1 • Séance 3</footer>
+</div>
+</body>
+</html>

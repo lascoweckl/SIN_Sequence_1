@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Séance 5 - Pont diviseur de tension</title>
+
+<style>
+
+@page{
+    size:A4;
+    margin:15mm;
+}
+
+body{
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#eceff3;
+    margin:0;
+    padding:30px;
+}
+
+.page{
+    width:210mm;
+    min-height:297mm;
+    margin:auto;
+    background:white;
+    padding:25mm;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+header{
+    background:#0b5394;
+    color:white;
+    padding:18px;
+    border-radius:8px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header h2{
+    margin-top:5px;
+    font-size:20px;
+    font-weight:normal;
+}
+
+.objectif{
+    background:#d9edf7;
+    border-left:8px solid #2980b9;
+    padding:15px;
+    margin-top:25px;
+    border-radius:5px;
+}
+
+.situation{
+    background:#fff3cd;
+    border-left:8px solid #ffc107;
+    padding:15px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section h2{
+    color:#0b5394;
+    border-bottom:3px solid #0b5394;
+    padding-bottom:5px;
+}
+
+.formule{
+    background:#f7f7f7;
+    border:2px solid #0b5394;
+    border-radius:8px;
+    padding:18px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.exercice{
+    background:#f5f5f5;
+    border-left:6px solid #27ae60;
+    padding:15px;
+    margin-top:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#0b5394;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.synthese{
+    margin-top:35px;
+    background:#e8f5e9;
+    padding:20px;
+    border-left:8px solid #2e7d32;
+    border-radius:5px;
+}
+
+.formulaire{
+    margin-top:30px;
+    background:#e3f2fd;
+    padding:20px;
+    border-radius:5px;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    font-size:12px;
+    color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+
+<h1>STI2D – Terminale SIN</h1>
+
+<h2>Séquence 1 – Électricité</h2>
+
+<h1>Séance 5 : Pont diviseur de tension</h1>
+
+<h2>Adaptation d'une tension et partage du courant</h2>
+
+</header>
+
+<div class="objectif">
+
+<h3>🎯 Objectif</h3>
+
+<p>
+Comprendre le fonctionnement du pont diviseur de tension et du pont diviseur de courant afin de les utiliser dans des montages électroniques et des systèmes d'acquisition.
+</p>
+
+</div>
+
+<div class="situation">
+
+<h3>🔍 Situation problème</h3>
+
+<p>
+
+Les entrées analogiques d'un microcontrôleur acceptent généralement une tension maximale de 5 V.
+Comment mesurer une tension de 10 V sans détériorer l'entrée ?
+
+</p>
+
+<p><b>Insérer ici le schéma du pont diviseur.</b></p>
+
+</div>
+
+<div class="section">
+
+<h2>1. Rappel</h2>
+
+<p>Dans un circuit série, le courant est identique dans tous les composants.</p>
+
+<div class="formule">
+
+I = U / (R₁ + R₂)
+
+</div>
+
+<p>Revoir la loi d'Ohm et la résistance équivalente en série.</p>
+
+</div>
+
+<div class="section">
+
+<h2>2. Pont diviseur de tension</h2>
+
+<p>
+
+Deux résistances sont montées en série entre <b>Vcc</b> et la masse.
+La tension <b>VA</b> est prélevée entre les deux résistances.
+
+</p>
+
+<img src="images/Schéma pont diviseur de tension.png" alt="Pont diviseur de tension" width="500">
+
+<h3>Formule</h3>
+
+<div class="formule">
+
+VA = Vcc × R₂ / (R₁ + R₂)
+
+</div>
+
+<h3>Démonstration</h3>
+
+<div class="formule">
+
+I = Vcc / (R₁ + R₂)
+
+</div>
+
+<div class="formule">
+
+VA = R₂ × I
+
+</div>
+
+<h3>Exercices</h3>
+
+<div class="exercice">
+
+<b>Exercice 1</b>
+
+<ul>
+
+<li>Vcc = 9 V</li>
+
+<li>R₁ = 1 kΩ</li>
+
+<li>R₂ = 3 kΩ</li>
+
+</ul>
+
+Calculer VA.
+
+</div>
+
+<div class="exercice">
+
+<b>Exercice 2</b>
+
+<ul>
+
+<li>Vcc = 5 V</li>
+
+<li>R₁ = 2 kΩ</li>
+
+<li>R₂ = 1 kΩ</li>
+
+</ul>
+
+Calculer VA.
+
+</div>
+
+<div class="exercice">
+
+<b>Exercice 3</b>
+
+<ul>
+
+<li>Vcc = 5 V</li>
+
+<li>R₁ = 1 kΩ</li>
+
+<li>VA = 2,5 V</li>
+
+</ul>
+
+Déterminer la valeur de R₂.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>3. Pont diviseur de courant</h2>
+
+<p>
+
+Deux résistances sont montées en parallèle.
+Le courant total se partage entre les deux branches.
+
+</p>
+
+<img src="images/Schéma pont diviseur de courant.png" alt="Pont diviseur de courant" width="500">
+
+<div class="formule">
+
+I₁ = Itotal × R₂ / (R₁ + R₂)
+
+</div>
+
+<div class="formule">
+
+I₂ = Itotal × R₁ / (R₁ + R₂)
+
+</div>
+
+<h3>Exercices</h3>
+
+<div class="exercice">
+
+Itotal = 100 mA
+
+<br><br>
+
+R₁ = 220 Ω
+
+<br>
+
+R₂ = 470 Ω
+
+<br><br>
+
+Calculer I₁ et I₂.
+
+</div>
+
+<div class="exercice">
+
+Modifier la valeur de R₂.
+
+<br><br>
+
+Observer l'influence sur le partage du courant.
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>4. Application : adaptation d'une tension</h2>
+
+<p>
+
+Un pont diviseur permet d'adapter une tension avant son entrée dans un convertisseur analogique-numérique (CAN).
+
+</p>
+
+<div class="exercice">
+
+Compléter le schéma :
+
+<br><br>
+
+0 → 10 V
+
+↓
+
+Pont diviseur
+
+↓
+
+0 → 5 V
+
+↓
+
+Entrée CAN
+
+</div>
+
+<div class="exercice">
+
+Pourquoi est-il indispensable d'abaisser la tension avant l'entrée du CAN ?
+
+</div>
+
+</div>
+
+<div class="synthese">
+
+<h2>📋 Synthèse</h2>
+
+<ul>
+
+<li>Le pont diviseur de tension fournit une fraction de la tension d'alimentation.</li>
+
+<li>Le pont diviseur de courant répartit le courant entre plusieurs branches.</li>
+
+<li>Ces deux montages sont très utilisés dans les systèmes électroniques.</li>
+
+<li>Ils permettent d'adapter des grandeurs électriques avant leur traitement.</li>
+
+</ul>
+
+</div>
+
+<div class="formulaire">
+
+<h2>📌 À retenir</h2>
+
+<ul>
+
+<li>U = R × I</li>
+
+<li>I = U / R</li>
+
+<li>VA = Vcc × R₂ / (R₁ + R₂)</li>
+
+<li>I₁ = Itotal × R₂ / (R₁ + R₂)</li>
+
+<li>I₂ = Itotal × R₁ / (R₁ + R₂)</li>
+
+</ul>
+
+</div>
+<center>
+<a href="séance_4.html">RETOUR</a>
+<a href="séance_6.html">SUIVANT</a>
+</br>
+<a href="index.html">SOMMAIRE</a>
+</center>
+<footer>
+
+Terminale STI2D SIN • Séquence 1 • Séance 3
+
+</footer>
+
+</div>
+
+</body>
+</html>

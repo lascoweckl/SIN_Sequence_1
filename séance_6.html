@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Séance 6 - Technologie des résistances</title>
+
+<style>
+
+@page{
+    size:A4;
+    margin:15mm;
+}
+
+body{
+    font-family:Segoe UI,Arial,sans-serif;
+    background:#eceff3;
+    margin:0;
+    padding:30px;
+}
+
+.page{
+    width:210mm;
+    min-height:297mm;
+    margin:auto;
+    background:white;
+    padding:25mm;
+    box-sizing:border-box;
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+header{
+    background:#0b5394;
+    color:white;
+    padding:18px;
+    border-radius:8px;
+}
+
+header h1{
+    margin:0;
+    font-size:30px;
+}
+
+header h2{
+    margin-top:5px;
+    font-size:20px;
+    font-weight:normal;
+}
+
+.objectif{
+    background:#d9edf7;
+    border-left:8px solid #2980b9;
+    padding:15px;
+    margin-top:25px;
+    border-radius:5px;
+}
+
+.situation{
+    background:#fff3cd;
+    border-left:8px solid #ffc107;
+    padding:15px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.section{
+    margin-top:35px;
+}
+
+.section h2{
+    color:#0b5394;
+    border-bottom:3px solid #0b5394;
+    padding-bottom:5px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th{
+    background:#0b5394;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border:1px solid #ccc;
+    padding:10px;
+}
+
+.exercice{
+    background:#f5f5f5;
+    border-left:6px solid #27ae60;
+    padding:15px;
+    margin-top:15px;
+}
+
+.synthese{
+    margin-top:35px;
+    background:#e8f5e9;
+    padding:20px;
+    border-left:8px solid #2e7d32;
+    border-radius:5px;
+}
+
+.formulaire{
+    margin-top:30px;
+    background:#e3f2fd;
+    padding:20px;
+    border-radius:5px;
+}
+
+footer{
+    margin-top:40px;
+    text-align:center;
+    font-size:12px;
+    color:#777;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+<header>
+
+<h1>STI2D – Terminale SIN</h1>
+
+<h2>Séquence 1 – Électricité</h2>
+
+<h1>Séance 6 : Technologie des résistances</h1>
+
+<h2>Code couleur des résistances</h2>
+
+</header>
+
+<div class="objectif">
+
+<h3>🎯 Objectif</h3>
+
+<p>
+Lire, écrire et interpréter le code couleur des résistances à 4 et 5 bandes.
+</p>
+
+</div>
+
+<div class="situation">
+
+<h3>🔍 Situation problème</h3>
+
+<p>
+
+Les résistances ne portent généralement pas leur valeur en clair.
+
+Comment retrouver leur valeur grâce aux bandes de couleur ?
+
+</p>
+
+<center><img src="images/code_resistance.png" style="height:500px; width:auto;" alt="code_resistance" /></center>
+
+
+</div>
+
+<div class="section">
+
+<h2>1. Le code couleur</h2>
+
+<p>Une résistance possède généralement 4 ou 5 bandes de couleur.</p>
+
+<table>
+
+<tr>
+
+<th>Bande 1</th>
+<th>Bande 2</th>
+<th>Multiplicateur</th>
+<th>Tolérance</th>
+
+</tr>
+
+<tr>
+
+<td>1er chiffre</td>
+<td>2e chiffre</td>
+<td>Facteur 10ⁿ</td>
+<td>%</td>
+
+</tr>
+
+</table>
+
+<h3>Correspondance des couleurs</h3>
+
+<table>
+
+<tr><th>Couleur</th><th>Valeur</th></tr>
+
+<tr><td>Noir</td><td>0</td></tr>
+<tr><td>Marron</td><td>1</td></tr>
+<tr><td>Rouge</td><td>2</td></tr>
+<tr><td>Orange</td><td>3</td></tr>
+<tr><td>Jaune</td><td>4</td></tr>
+<tr><td>Vert</td><td>5</td></tr>
+<tr><td>Bleu</td><td>6</td></tr>
+<tr><td>Violet</td><td>7</td></tr>
+<tr><td>Gris</td><td>8</td></tr>
+<tr><td>Blanc</td><td>9</td></tr>
+
+</table>
+
+<h3>Multiplicateurs</h3>
+
+<table>
+
+<tr><th>Couleur</th><th>Multiplicateur</th></tr>
+
+<tr><td>Noir</td><td>×1</td></tr>
+<tr><td>Marron</td><td>×10</td></tr>
+<tr><td>Rouge</td><td>×100</td></tr>
+<tr><td>Orange</td><td>×1 kΩ</td></tr>
+<tr><td>Jaune</td><td>×10 kΩ</td></tr>
+<tr><td>Vert</td><td>×100 kΩ</td></tr>
+<tr><td>Bleu</td><td>×1 MΩ</td></tr>
+
+</table>
+
+<h3>Tolérances</h3>
+
+<table>
+
+<tr><th>Couleur</th><th>Tolérance</th></tr>
+
+
+<tr><td>Marron</td><td>±1 %</td></tr>
+<tr><td>Rouge</td><td>±2 %</td></tr>
+<tr><td>Or</td><td>±5 %</td></tr>
+<tr><td>Argent</td><td>±10 %</td></tr>
+
+</table>
+
+<p><b>Pour une résistance à 5 bandes :</b> les trois premières bandes représentent les chiffres significatifs, la quatrième le multiplicateur et la cinquième la tolérance.</p>
+
+</div>
+
+<div class="section">
+
+<h2>2. Exercices : couleurs → valeur</h2>
+
+<div class="exercice">
+
+Jaune – Violet – Rouge – Or
+
+<br><br>
+
+Calculer la valeur de la résistance.
+
+</div>
+
+<div class="exercice">
+
+Marron – Noir – Marron – Rouge – Vert
+
+<br><br>
+
+Calculer la valeur de la résistance.
+
+</div>
+
+<div class="exercice">
+
+Orange – Blanc – Orange – Or
+
+<br><br>
+
+Calculer la valeur de la résistance.
+
+</div>
+
+<p><b>À retenir :</b></p>
+
+<ul>
+
+<li>Lire de gauche vers la droite.</li>
+
+<li>Convertir si nécessaire en kΩ ou MΩ.</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>3. Exercices : valeur → couleurs</h2>
+
+<div class="exercice">
+
+100 Ω ±5 %
+
+</div>
+
+<div class="exercice">
+
+330 Ω ±5 %
+
+</div>
+
+<div class="exercice">
+
+2,2 kΩ ±10 %
+
+</div>
+
+<div class="exercice">
+
+47 kΩ ±5 %
+
+</div>
+
+<div class="exercice">
+
+1 100 Ω ±0,5 % (5 bandes)
+
+</div>
+
+<div class="exercice">
+
+39 kΩ ±5 % (5 bandes)
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>4. Application</h2>
+
+<p>
+
+Comment choisir la bonne résistance dans un montage électronique ?
+
+</p>
+
+<div class="exercice">
+
+Quelle résistance (code couleur) choisir pour protéger une DEL alimentée sous 5 V consommant 20 mA ?
+
+</div>
+
+</div>
+
+<div class="synthese">
+
+<h2>📋 Synthèse</h2>
+
+<ul>
+
+<li>Les deux ou trois premières bandes donnent les chiffres significatifs.</li>
+
+<li>La bande suivante indique le multiplicateur.</li>
+
+<li>La dernière bande donne la tolérance.</li>
+
+<li>Le code couleur permet d'identifier rapidement une résistance.</li>
+
+</ul>
+
+</div>
+
+<div class="formulaire">
+
+<h2>📌 À retenir</h2>
+
+<ul>
+
+<li>4 bandes : 2 chiffres + multiplicateur + tolérance.</li>
+
+<li>5 bandes : 3 chiffres + multiplicateur + tolérance.</li>
+
+<li>Toujours lire la résistance du côté opposé à la bande de tolérance.</li>
+
+</ul>
+
+</div>
+<center>
+<a href="séance_5.html">RETOUR</a>
+<a href="séance_7.html">SUIVANT</a>
+</br>
+<a href="index.html">SOMMAIRE</a>
+</center>
+<footer>
+
+Terminale STI2D SIN • Séquence 1 • Séance 4
+
+</footer>
+
+</div>
+
+</body>
+</html>

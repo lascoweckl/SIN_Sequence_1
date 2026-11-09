@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   S&eacute;ance 4 &ndash; Fabrication et test du PCB
+  </title>
+  <style>
+   @page{size:A4;margin:15mm}*{box-sizing:border-box}body{font-family:Segoe UI,Arial,sans-serif;background:#eceff3;margin:0;padding:30px;color:#222}.page{width:210mm;min-height:297mm;margin:auto;background:white;padding:25mm;box-shadow:0 0 20px rgba(0,0,0,.2)}header{background:#0b5394;color:white;padding:18px;border-radius:8px}header h1{margin:0 0 5px;font-size:28px}header h2{margin:5px 0;font-size:19px;font-weight:normal}.section{margin-top:32px}.section h2{color:#0b5394;border-bottom:3px solid #0b5394;padding-bottom:5px}.objectif{background:#d9edf7;border-left:8px solid #2980b9;padding:15px;margin-top:25px;border-radius:5px}.consigne{background:#fff3cd;border-left:8px solid #ffc107;padding:15px;margin:16px 0;border-radius:5px}.validation{background:#e8f5e9;border-left:8px solid #2e7d32;padding:15px;margin:18px 0;border-radius:5px}.exercice{background:#f5f5f5;border-left:6px solid #27ae60;padding:15px;margin:15px 0;border-radius:4px}.formule{background:#f7f7f7;border:2px solid #0b5394;border-radius:8px;padding:15px;text-align:center;margin:15px 0}.table-wrap{overflow-x:auto;margin:15px 0}table{width:100%;border-collapse:collapse}th{background:#0b5394;color:white}th,td{border:1px solid #ccc;padding:9px;text-align:left;vertical-align:top}p{line-height:1.55}img{max-width:100%;height:auto}.illustrations{display:flex;gap:18px;align-items:start;justify-content:center;flex-wrap:wrap;margin:18px 0}.illustrations figure{margin:0;flex:1 1 180px;text-align:center}.illustrations figcaption{font-weight:bold;margin-bottom:10px;color:#0b5394}.navigation-simple{text-align:center;margin-top:35px}.navigation-simple a{margin:0 12px}footer{margin-top:35px;text-align:center;font-size:12px;color:#777}@media(max-width:850px){body{padding:0}.page{width:100%;padding:20px;box-shadow:none}}@media print{body{background:white;padding:0}.page{width:auto;min-height:0;padding:0;box-shadow:none}.section h2,.objectif,.consigne,.validation,.exercice{break-inside:avoid}thead{display:table-header-group}}
+  </style>
+ </head>
+ <body>
+  <div class="page">
+   <header>
+    <h2>
+     STI2D &ndash; Terminale SIN
+    </h2>
+    <h2>
+     Projet SIN 1 &ndash; LAMPE
+    </h2>
+    <h1>
+     FABRICATION ET TEST DU PCB
+    </h1>
+    <h2>
+     Assemblage &bull; Contr&ocirc;les &bull; Mise sous tension &bull; Validation
+    </h2>
+   </header>
+   <div class="objectif">
+    <div>
+     <table>
+      <tr>
+       <td width="721">
+        <p>
+         <b>
+          🎯 OBJECTIF
+         </b>
+        </p>
+        <p>
+         Assembler la carte &eacute;lectronique, contr&ocirc;ler la qualit&eacute;
+  des brasures, effectuer les v&eacute;rifications &eacute;lectriques hors tension, r&eacute;aliser
+  une premi&egrave;re mise sous tension s&eacute;curis&eacute;e puis valider le fonctionnement de la
+  carte.
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <section class="section">
+    <h2>
+     1. Comprendre la carte avant de souder
+    </h2>
+   </section>
+   <p>
+    <p>
+     Le montage comporte une
+alimentation, un interrupteur, une r&eacute;sistance R1 et trois DEL rouges mont&eacute;es en
+s&eacute;rie.
+    </p>
+   </p>
+   <div class="illustrations">
+    <figure>
+     <figcaption>
+      Vue du PCB
+     </figcaption>
+     <img alt="Vue du PCB" src="seance_4_fichiers/image001.png"/>
+    </figure>
+    <figure>
+     <figcaption>
+      Sch&eacute;ma structurel
+     </figcaption>
+     <img alt="Sch&eacute;ma structurel" src="seance_4_fichiers/image002.png"/>
+    </figure>
+   </div>
+   <div class="exercice">
+    <table>
+     <tr>
+      <td width="679">
+       <p>
+        <b>
+         Q1. &Agrave;
+  partir du sch&eacute;ma, indiquer le trajet du courant lorsque l&rsquo;interrupteur est
+  ferm&eacute;.
+        </b>
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="exercice">
+    <table>
+     <tr>
+      <td width="680">
+       <p>
+        <b>
+         Q2. Les
+  trois DEL sont-elles mont&eacute;es en s&eacute;rie ou en parall&egrave;le ? Justifier.
+        </b>
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="exercice">
+    <table>
+     <tr>
+      <td width="680">
+       <p>
+        <b>
+         Q3. Que se
+  passe-t-il si une seule DEL est mont&eacute;e &agrave; l&rsquo;envers ?
+        </b>
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <section class="section">
+    <h2>
+     2. Contr&ocirc;le du PCB nu
+    </h2>
+   </section>
+   <div class="consigne">
+    <div>
+     <table>
+      <tr>
+       <td width="680">
+        <p>
+         <b>
+          ⚠ IMPORTANT
+         </b>
+        </p>
+        <p>
+         Aucune alimentation ne doit
+  &ecirc;tre raccord&eacute;e pendant les contr&ocirc;les &agrave; l&rsquo;ohmm&egrave;tre ou au testeur de
+  continuit&eacute;.
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Inspecter
+     visuellement les
+pistes et les pastilles : absence de piste coup&eacute;e, pastille arrach&eacute;e ou d&eacute;faut
+&eacute;vident.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Rep&eacute;rer
+     les bornes
+d&rsquo;alimentation, l&rsquo;emplacement de l&rsquo;interrupteur, R1, LED1, LED2 et LED3.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Au
+     multim&egrave;tre, v&eacute;rifier
+qu&rsquo;il n&rsquo;existe pas de court-circuit franc entre les deux bornes ALIM.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Contr&ocirc;ler
+     la continuit&eacute;
+des pistes principales entre les diff&eacute;rents composants.
+    </p>
+   </p>
+   <div class="validation">
+    <div>
+     <table>
+      <tr>
+       <td width="680">
+        <p>
+         <b>
+          VALIDATION
+  PROFESSEUR N&deg;1
+         </b>
+        </p>
+        <p>
+         PCB nu contr&ocirc;l&eacute; :
+         &nbsp;&nbsp;&nbsp;
+         ☐ Conforme
+         &nbsp;&nbsp;&nbsp;&nbsp;
+         ☐ &Agrave; corriger
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <section class="section">
+    <h2>
+     3. Pr&eacute;paration et identification des composants
+    </h2>
+   </section>
+   <p>
+    <p>
+     Avant implantation,
+identifier chaque composant et
+     esistan
+     sa conformit&eacute;.
+    </p>
+   </p>
+   <div class="table-wrap">
+    <div>
+     <table>
+      <tr>
+       <td width="170">
+        <p>
+         <b>
+          Composant
+         </b>
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         <b>
+          Contr&ocirc;le demand&eacute;
+         </b>
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         <b>
+          R&eacute;sultat
+         </b>
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         <b>
+          Conforme
+         </b>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         R1
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         Mesurer la r&eacute;sistance &agrave; l&rsquo;ohmm&egrave;tre
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         LED1
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         Rep&eacute;rer anode et cathode
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         LED2
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         Rep&eacute;rer anode et cathode
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         LED3
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         Rep&eacute;rer anode et cathode
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         Interrupteur
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         Identifier les bornes utilis&eacute;es
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <section class="section">
+    <h2>
+     4. Implantation et soudure
+    </h2>
+   </section>
+   <p>
+    <p>
+     <b>
+      <!--[if gte vml 1]><v:shape
+ id="Image_x0020_1" o:spid="_x0000_i1025" type="#_x0000_t75" style='width:237.6pt;
+ height:324.6pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="seance_4_fichiers/image003.png" o:title=""/>
+</v:shape><![endif]-->
+      <!--[if !vml]-->
+      <img src="seance_4_fichiers/image005.png"/>
+      <!--[endif]-->
+     </b>
+     <b>
+     </b>
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      Ordre conseill&eacute; :
+     </b>
+     R1 &rarr; LED1, LED2, LED3 &rarr; connecteur
+ALIM &rarr; interrupteur.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Former
+     les pattes sans les
+contraindre et implanter R1 au bon emplacement.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Implanter
+     les DEL en
+respectant imp&eacute;rativement leur polarit&eacute;.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Maintenir
+     les composants
+correctement plaqu&eacute;s contre le PCB.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Chauffer
+     simultan&eacute;ment la
+pastille et la patte du composant, puis apporter l&rsquo;&eacute;tain.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Retirer
+     l&rsquo;&eacute;tain puis le
+fer. Laisser refroidir sans bouger la connexion.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Couper
+     les pattes au ras
+de la soudure sans endommager celle-ci.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     l&rsquo;absence de pont
+de soudure, de soudure froide et d&rsquo;exc&egrave;s d&rsquo;&eacute;tain.
+    </p>
+   </p>
+   <div class="consigne">
+    <div>
+     <table>
+      <tr>
+       <td width="680">
+        <p>
+         <b>
+          QUALIT&Eacute; ATTENDUE
+         </b>
+        </p>
+        <p>
+         Une brasure correcte doit
+  mouiller la pastille et la patte, pr&eacute;senter une forme r&eacute;guli&egrave;re et ne cr&eacute;er
+  aucun pont avec une piste ou une pastille voisine.
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <div class="validation">
+    <div>
+     <table>
+      <tr>
+       <td width="680">
+        <p>
+         <b>
+          VALIDATION
+  PROFESSEUR N&deg;2
+         </b>
+        </p>
+        <p>
+         Implantation et brasures
+  contr&ocirc;l&eacute;es :
+         &nbsp;&nbsp;&nbsp;
+         ☐ Conforme
+         &nbsp;&nbsp;&nbsp;&nbsp;
+         ☐ Reprise n&eacute;cessaire
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <section class="section">
+    <h2>
+     5. Tests &eacute;lectriques hors tension
+    </h2>
+   </section>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     visuellement une
+seconde fois la polarit&eacute; des trois DEL.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     l&rsquo;absence de
+court-circuit entre les bornes d&rsquo;alimentation.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Contr&ocirc;ler
+     au testeur de
+continuit&eacute; les liaisons du circuit.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Contr&ocirc;ler
+     les DEL au mode
+&laquo; test diode &raquo; du multim&egrave;tre lorsque la configuration du montage le permet.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     le fonctionnement
+de l&rsquo;interrupteur &agrave; l&rsquo;ohmm&egrave;tre : circuit ouvert / circuit ferm&eacute;.
+    </p>
+   </p>
+   <div class="exercice">
+    <table>
+     <tr>
+      <td width="680">
+       <p>
+        <b>
+         Q4.
+  R&eacute;sistance mesur&eacute;e de R1 avant mise sous tension :
+         &nbsp;&nbsp;&nbsp;
+         R1 = ................................
+  &Omega;
+        </b>
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="validation">
+    <div>
+     <table>
+      <tr>
+       <td width="680">
+        <p>
+         <b>
+          VALIDATION
+  PROFESSEUR N&deg;3
+         </b>
+        </p>
+        <p>
+         Contr&ocirc;les hors tension
+  valid&eacute;s. Autorisation de mise sous tension :
+         &nbsp;&nbsp;&nbsp;
+         ☐ OUI
+         &nbsp;&nbsp;&nbsp;&nbsp;
+         ☐ NON
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <section class="section">
+    <h2>
+     6. Premi&egrave;re mise sous tension
+    </h2>
+   </section>
+   <div class="consigne">
+    <div>
+     <table>
+      <tr>
+       <td width="680">
+        <p>
+         <b>
+          ⚠ MISE SOUS
+  TENSION S&Eacute;CURIS&Eacute;E
+         </b>
+        </p>
+        <p>
+         R&eacute;gler l&rsquo;alimentation
+  stabilis&eacute;e &agrave; 9,0 V avant de la raccorder. R&eacute;gler une limitation de courant
+  adapt&eacute;e au montage. L&rsquo;interrupteur de la carte doit &ecirc;tre ouvert lors du
+  raccordement. En cas d&rsquo;&eacute;chauffement, d&rsquo;odeur, de fum&eacute;e ou de comportement
+  anormal : couper imm&eacute;diatement l&rsquo;alimentation.
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     9,0 V aux bornes
+de l&rsquo;alimentation avant raccordement.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Raccorder
+     la polarit&eacute; + et
+0 V conform&eacute;ment au PCB.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Mettre
+     l&rsquo;alimentation sous
+tension avec l&rsquo;interrupteur de la carte ouvert.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Fermer
+     l&rsquo;interrupteur et
+observer le fonctionnement des trois DEL.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     l&rsquo;absence
+d&rsquo;&eacute;chauffement anormal de R1.
+    </p>
+   </p>
+   <section class="section">
+    <h2>
+     7. Mesures et validation fonctionnelle
+    </h2>
+   </section>
+   <div class="table-wrap">
+    <div>
+     <table>
+      <tr>
+       <td width="170">
+        <p>
+         <b>
+          Grandeur
+         </b>
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         <b>
+          Valeur attendue / calcul&eacute;e
+         </b>
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         <b>
+          Valeur mesur&eacute;e
+         </b>
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         <b>
+          Conforme ?
+         </b>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         Ualim
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         9,0 V
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         ULED1
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         D&rsquo;apr&egrave;s datasheet
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         ULED2
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         D&rsquo;apr&egrave;s datasheet
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         ULED3
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         D&rsquo;apr&egrave;s datasheet
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         UR1
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         &Agrave; calculer
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="170">
+        <p>
+         Courant I
+        </p>
+       </td>
+       <td width="170">
+        <p>
+         &Agrave; calculer
+        </p>
+       </td>
+       <td width="170">
+       </td>
+       <td width="170">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <div class="exercice">
+    <table>
+     <tr>
+      <td width="680">
+       <p>
+        <b>
+         Q5.
+  V&eacute;rifier la loi des mailles :
+         Ualim
+         &asymp; UR1 +
+  ULED1 + ULED2 + ULED3.
+        </b>
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="exercice">
+    <table>
+     <tr>
+      <td width="680">
+       <p>
+        <b>
+         Q6. &Agrave;
+  partir de UR1 et de R1, calculer le courant dans la cha&icirc;ne de DEL. Comparer
+  avec la mesure.
+        </b>
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <section class="section">
+    <h2>
+     8. Diagnostic en cas de non-fonctionnement
+    </h2>
+   </section>
+   <p>
+    <p>
+     Si les DEL ne s&rsquo;allument
+pas, ne remplacer aucun composant au hasard. Proc&eacute;der m&eacute;thodiquement :
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Couper
+     l&rsquo;alimentation.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     la tension et la
+polarit&eacute; de l&rsquo;alimentation.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     l&rsquo;interrupteur.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Rechercher
+     un
+court-circuit ou une coupure de piste.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Inspecter
+     les brasures.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     V&eacute;rifier
+     le sens de LED1,
+LED2 et LED3.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Tester
+     les DEL au
+multim&egrave;tre et localiser le composant ou la liaison d&eacute;fectueuse.
+    </p>
+   </p>
+   <p>
+    <p>
+     <b>
+      ☐
+      &nbsp;
+     </b>
+     Corriger
+     le d&eacute;faut puis
+reprendre le protocole de mise sous tension.
+    </p>
+   </p>
+   <div class="exercice">
+    <table>
+     <tr>
+      <td width="680">
+       <p>
+        <b>
+         Q7. D&eacute;faut
+  &eacute;ventuellement constat&eacute; :
+        </b>
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <div class="exercice">
+    <table>
+     <tr>
+      <td width="680">
+       <p>
+        <b>
+         Action
+  corrective r&eacute;alis&eacute;e :
+        </b>
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+       <p>
+        ............................................................................................................................
+       </p>
+      </td>
+     </tr>
+    </table>
+   </div>
+   <section class="section">
+    <h2>
+     9. Recette finale de la carte
+    </h2>
+   </section>
+   <div class="table-wrap">
+    <div>
+     <table>
+      <tr>
+       <td width="227">
+        <p>
+         <b>
+          Crit&egrave;re de validation
+         </b>
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         <b>
+          OK
+         </b>
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         <b>
+          NOK
+         </b>
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="227">
+        <p>
+         Implantation conforme
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="227">
+        <p>
+         Polarit&eacute; des DEL correcte
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="227">
+        <p>
+         Brasures conformes
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="227">
+        <p>
+         Absence de court-circuit
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="227">
+        <p>
+         Interrupteur fonctionnel
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="227">
+        <p>
+         Trois DEL fonctionnelles
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="227">
+        <p>
+         Mesures &eacute;lectriques coh&eacute;rentes
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+      <tr>
+       <td width="227">
+        <p>
+         Absence d&rsquo;&eacute;chauffement anormal
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+       <td width="227">
+        <p>
+         ☐
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <div class="validation">
+    <div>
+     <table>
+      <tr>
+       <td width="680">
+        <p>
+         <b>
+          ✅ VALIDATION
+  FINALE
+         </b>
+        </p>
+        <p>
+         Carte d&eacute;clar&eacute;e :
+         &nbsp;&nbsp;&nbsp;
+         ☐ CONFORME
+         &nbsp;&nbsp;&nbsp;&nbsp;
+         ☐ NON CONFORME
+         <br/>
+         <br/>
+         Visa professeur :
+  ............................................................
+        </p>
+       </td>
+      </tr>
+     </table>
+    </div>
+   </div>
+   <center>
+    <a href="seance_3.html">PR&Eacute;C&Eacute;DENT</a>
+    <a href="seance_5.html">SUIVANT</a>
+	</br>
+	<a href="index.html">SOMMAIRE</a>
+   </center>
+   <footer>
+    Terminale STI2D SIN &bull; Projet SIN 1 &bull; S&eacute;ance 4
+   </footer>
+  </div>
+ </body>
+</html>
