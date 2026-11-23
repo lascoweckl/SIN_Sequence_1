@@ -1,0 +1,22 @@
+/* Charte commune SIN — Navigation et présentation, sans modifier les contenus */
+:root{--sin-blue:#0b5394;--sin-dark:#073b6b;--sin-light:#eaf4fc;--sin-text:#20364d}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Arial,sans-serif;color:var(--sin-text);line-height:1.5}
+body:not(.sin-exercice){background-color:#eef2f7}
+body .page,body main,body .container{max-width:1050px}
+body .page{width:min(100%,1050px);height:auto;min-height:0}
+body .container{width:min(100%,1050px)}
+body .page,body main,body .container{margin-left:auto;margin-right:auto}
+body .page,body main,body .container{overflow-wrap:anywhere}
+body img{max-width:100%;height:auto}
+body table{max-width:100%}
+.sin-footer-nav{display:flex;gap:12px;justify-content:space-between;align-items:stretch;flex-wrap:wrap;margin:36px auto 8px;padding:19px 0 0;border-top:2px solid #c6dcec;max-width:960px}
+.sin-footer-nav a,.sin-footer-nav .sin-disabled{display:inline-flex;align-items:center;justify-content:center;flex:1 1 170px;min-height:46px;padding:11px 18px;border-radius:9px;background:var(--sin-blue);color:white!important;font-weight:700;font-size:15px;text-decoration:none!important;text-align:center;border:1px solid var(--sin-dark);box-shadow:0 2px 6px #082c4b18;transition:background .15s}
+.sin-footer-nav a:hover,.sin-footer-nav a:focus-visible{background:var(--sin-dark);outline-offset:2px}
+.sin-footer-nav .sin-home{background:#eaf4fc;color:var(--sin-dark)!important}
+.sin-footer-nav .sin-home:hover{background:#d2e8f9}
+.sin-footer-nav .sin-disabled{background:#edf1f5;color:#718193!important;border-color:#d4dce3;box-shadow:none}
+.sin-footer-nav a:visited{color:white}
+.sin-footer-nav .sin-home:visited{color:var(--sin-dark)}
+@media(max-width:700px){body{padding:12px!important}body .page,body main,body .container{padding:20px!important;max-width:100%;box-shadow:none}.sin-footer-nav{gap:8px}.sin-footer-nav a,.sin-footer-nav .sin-disabled{flex-basis:100%;min-height:43px}}
+@media print{body{background:white!important}.sin-footer-nav{display:none!important}body .page,body main,body .container{box-shadow:none!important}}

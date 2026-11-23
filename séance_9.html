@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Séance 9 – Test du PCB et soudure des composants | Terminale STI2D SIN</title>
+<style>
+        :root {
+            --bleu: #0b5394;
+            --bleu-fonce: #003366;
+            --bleu-clair: #d9edf7;
+            --fond: #eef2f7;
+            --texte: #23364a;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 28px 14px;
+            background: var(--fond);
+            color: var(--texte);
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.6;
+        }
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 34px 42px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 26px rgba(0, 30, 60, .12);
+        }
+        header {
+            padding: 24px 26px;
+            background: var(--bleu);
+            color: white;
+            border-radius: 10px;
+        }
+        header .sur-titre { margin: 0 0 5px; opacity: .9; }
+        h1 { margin: 0; font-size: 2rem; line-height: 1.25; }
+        header .sous-titre { margin: 10px 0 0; }
+        h2 {
+            margin: 35px 0 18px;
+            padding-bottom: 8px;
+            color: var(--bleu);
+            border-bottom: 3px solid var(--bleu);
+            font-size: 1.45rem;
+        }
+        h3 { margin: 22px 0 8px; color: var(--bleu-fonce); }
+        .objectif, .attention, .consigne {
+            padding: 14px 18px;
+            margin: 22px 0;
+            border-radius: 7px;
+        }
+        .objectif { background: var(--bleu-clair); border-left: 7px solid #2980b9; }
+        .attention { background: #fff4d6; border-left: 7px solid #e4a21c; }
+        .consigne { background: #f0f7fc; border-left: 6px solid var(--bleu); }
+        figure { margin: 22px 0 26px; text-align: center; }
+        figure img {
+            max-width: 100%;
+            max-height: 540px;
+            width: auto;
+            height: auto;
+            border: 1px solid #d8e2ed;
+            border-radius: 8px;
+            background: white;
+        }
+        figcaption { margin-top: 8px; color: #53677a; font-size: .92rem; }
+        ol { padding-left: 1.6rem; }
+        li { padding-left: .2rem; margin-bottom: 9px; }
+        table { width: 100%; border-collapse: collapse; margin: 18px 0; }
+        th { background: var(--bleu); color: white; }
+        th, td { padding: 11px; border: 1px solid #9fb8cc; text-align: left; }
+        tbody tr:nth-child(even) { background: #f2f7fb; }
+        td.vide { min-height: 38px; }
+        .case { display: inline-block; width: 16px; height: 16px; border: 1.5px solid #58718a; vertical-align: -2px; margin-right: 7px; }
+        .reponse { min-height: 62px; border: 1px solid #b8cada; border-radius: 5px; background: #fbfdff; margin: 12px 0 22px; }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #d8e2ec;
+        }
+        .navigation a {
+            display: inline-block;
+            padding: 12px 20px;
+            background: var(--bleu);
+            border-radius: 9px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .navigation a:hover, .navigation a:focus { background: #ff9800; color: #172c42; }
+        footer { text-align: center; margin-top: 24px; color: #6c7e90; font-size: .9rem; }
+        @media (max-width: 650px) {
+            body { padding: 0; }
+            main { padding: 18px; border-radius: 0; }
+            h1 { font-size: 1.55rem; }
+            h2 { font-size: 1.25rem; }
+            th, td { padding: 7px; font-size: .88rem; }
+        }
+        @media print {
+            @page { size: A4; margin: 13mm; }
+            body { padding: 0; background: white; }
+            main { max-width: none; padding: 0; box-shadow: none; }
+            figure, table, .consigne, .objectif, .attention { break-inside: avoid; }
+            h2, h3 { break-after: avoid; }
+            .navigation { display: none; }
+        }
+    </style>
+<link href="sin-commun.css" rel="stylesheet"/></head>
+<body>
+<main>
+<header>
+<p class="sur-titre">Terminale STI2D – Spécialité SIN · Séquence 1 : Électricité</p>
+<h1>Séance 9 – Test du PCB et soudure des composants</h1>
+<p class="sous-titre">Projet : voltmètre numérique</p>
+</header>
+<section class="objectif">
+<strong>Objectif :</strong> vérifier la conformité électrique du circuit imprimé (PCB)
+        avant assemblage, puis implanter et souder les composants en respectant le schéma
+        électrique et les règles de sécurité.
+    </section>
+<h2>1) Test de continuité du PCB</h2>
+<p>Avant toute soudure, vérifier que les pistes du circuit imprimé assurent les
+       connexions attendues et qu'aucun court-circuit indésirable n'est présent.</p>
+<figure>
+<img alt="Schéma électrique du voltmètre numérique" loading="lazy" src="images/schéma_elec_voltmètre.png"/>
+<figcaption>Document 1 – Schéma électrique du voltmètre numérique.</figcaption>
+</figure>
+<figure>
+<img alt="Vue du circuit imprimé du voltmètre numérique" loading="lazy" src="images/PCB_voltmètre.png"/>
+<figcaption>Document 2 – Circuit imprimé (PCB) du voltmètre numérique.</figcaption>
+</figure>
+<div class="attention"><strong>Consigne de sécurité :</strong> réaliser tous les tests de
+        continuité sur un PCB <strong>hors tension</strong> et déconnecté de toute alimentation.</div>
+<h3>Travail demandé</h3>
+<ol>
+<li>Observer le schéma électrique et le PCB. Repérer les pistes et les pastilles
+            correspondant aux principales connexions du montage.</li>
+<li>Régler le multimètre sur la fonction <strong>test de continuité</strong>.
+            Vérifier son fonctionnement en mettant brièvement les deux pointes en contact.</li>
+<li>Pour chaque liaison identifiée sur le schéma, placer les pointes du multimètre
+            sur les deux pastilles correspondantes. Vérifier la continuité attendue.</li>
+<li>Contrôler l'absence de continuité entre les pistes qui ne doivent pas être
+            reliées, notamment entre les lignes d'alimentation et la masse.</li>
+<li>Reporter les résultats dans le tableau et signaler toute anomalie avant de
+            passer à la soudure.</li>
+</ol>
+<table>
+<thead>
+<tr><th>Points de contrôle (pastilles / pistes)</th><th>Résultat attendu</th><th>Résultat mesuré</th></tr>
+</thead>
+<tbody>
+<tr><td>Connexion n° 1 : ................................</td><td>Continuité</td><td class="vide"></td></tr>
+<tr><td>Connexion n° 2 : ................................</td><td>Continuité</td><td class="vide"></td></tr>
+<tr><td>Connexion n° 3 : ................................</td><td>Continuité</td><td class="vide"></td></tr>
+<tr><td>Deux pistes distinctes : ........................</td><td>Absence de continuité</td><td class="vide"></td></tr>
+<tr><td>Alimentation / masse</td><td>Absence de court-circuit</td><td class="vide"></td></tr>
+</tbody>
+</table>
+<p><strong>Conclusion :</strong> le PCB est-il conforme au schéma électrique ? Justifier.</p>
+<div class="reponse"></div>
+<h2>2) Soudage des composants</h2>
+<p>Une fois le PCB contrôlé, procéder à l'implantation et à la soudure des composants
+       électroniques en suivant le schéma et les repères de la carte.</p>
+<div class="attention"><strong>Sécurité :</strong> travailler sur un poste ventilé,
+        utiliser le support du fer à souder, ne jamais toucher sa panne et laisser
+        refroidir les soudures avant manipulation. Le PCB doit rester hors tension.</div>
+<h3>Nomenclature des composants du voltmètre</h3>
+<p>Avant la soudure, vérifier la présence des composants à partir de la nomenclature du PCB.</p>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Référence / valeur</th><th>Repères sur le PCB</th><th>Quantité</th></tr></thead>
+<tbody><tr><td>HDR-F-2.54_1x2</td><td>H1</td><td>1</td></tr><tr><td>HDR-M-2.54_1x1</td><td>J1,J2</td><td>2</td></tr><tr><td>1k</td><td>R1,R2,R3,R4,R5,R13,R14,R15,R16</td><td>9</td></tr><tr><td>220</td><td>R6,R7,R8,R9,R10,R11,R12</td><td>7</td></tr><tr><td>SEG-TH_0.56×1_Anode</td><td>SEG1</td><td>1</td></tr><tr><td>LMC6484</td><td>U3</td><td>1</td></tr><tr><td>CD4011</td><td>IC1,IC2</td><td>2</td></tr><tr><td>CD40107</td><td>U1,U2</td><td>2</td></tr></tbody>
+</table>
+</div>
+<div class="consigne"><strong>Attention :</strong> l'afficheur SEG1 est à anode commune. Vérifier le repère de la broche 1 et l'orientation des circuits intégrés avant soudure.</div>
+<h3>Travail demandé</h3>
+<ol>
+<li>Identifier les composants et vérifier leur valeur ou leur référence à l'aide
+            du schéma électrique et des marquages du PCB.</li>
+<li>Repérer l'emplacement de chaque composant. Vérifier particulièrement le
+            <strong>sens des composants polarisés</strong> (DEL, circuits intégrés, etc.,
+            selon les composants effectivement présents sur la carte).</li>
+<li>Implanter les composants, de préférence du plus bas au plus haut, afin de
+            faciliter leur maintien pendant la soudure.</li>
+<li>Souder les broches avec une quantité adaptée de soudure. Éviter les ponts
+            d'étain entre pastilles voisines.</li>
+<li>Après refroidissement, couper les longueurs de broches excédentaires si
+            nécessaire, sans endommager les soudures.</li>
+<li>Inspecter chaque soudure : aspect régulier, bonne adhérence à la pastille,
+            absence de soudure froide et de court-circuit.</li>
+<li>Effectuer un dernier contrôle de continuité et d'absence de court-circuit
+            <strong>avant toute mise sous tension</strong>.</li>
+</ol>
+<div class="consigne">
+<strong>Contrôle final – à compléter :</strong>
+<p><span class="case"></span>Valeurs et références des composants vérifiées</p>
+<p><span class="case"></span>Polarités et orientations vérifiées</p>
+<p><span class="case"></span>Soudures inspectées visuellement</p>
+<p><span class="case"></span>Absence de ponts de soudure et de courts-circuits vérifiée</p>
+<p><span class="case"></span>PCB prêt à être présenté à l'enseignant avant alimentation</p>
+</div>
+<footer>Terminale STI2D SIN · Séquence 1 · Séance 9</footer>
+<nav aria-label="Navigation en bas de page" class="sin-footer-nav"><a href="séance_8.html">← Séance 8</a><a class="sin-home" href="index.html">Sommaire</a><span aria-disabled="true" class="sin-disabled">Suivant →</span></nav></main>
+</body>
+</html>

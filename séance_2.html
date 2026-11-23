@@ -1,9 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8"/>
 <title>Séance 2 - Résistances équivalentes</title>
-
 <style>
 
 @page{
@@ -146,256 +146,156 @@ color:#777;
 }
 
 </style>
-
-</head>
-
+<link href="sin-commun.css" rel="stylesheet"/></head>
 <body>
-
 <div class="page">
-
 <header>
-
 <h1>STI2D – Terminale SIN</h1>
-
 <h2>Séquence 1 – Électricité</h2>
-
 <h1>Séance 2 : Résistances équivalentes</h1>
-
 <h2>Associations série et parallèle</h2>
-
 </header>
-
 <div class="objectif">
-
 <h3>🎯 Objectif</h3>
-
 <p>
 Maîtriser les associations de résistances et calculer la résistance équivalente d'un circuit.
 </p>
-
 </div>
-
 <div class="situation">
-
 <h3>🔍 Situation problème</h3>
-
 <p>
 
 Les montages électroniques utilisent très souvent plusieurs résistances.
 Comment peut-on remplacer plusieurs résistances par une seule résistance équivalente afin de simplifier les calculs ?
 
 </p>
-
-<img src="images/res_equ_serie_ou_parallele.png" style="height:200px; width:auto;" alt="res_equ_serie_ou_parallele" />
-
+<img alt="res_equ_serie_ou_parallele" src="images/res_equ_serie_ou_parallele.png" style="height:200px; width:auto;"/>
 </div>
-
 <div class="section">
-
 <h2>1. Rappel rapide</h2>
-
 <ul>
-
 <li>Loi d'Ohm</li>
-
 <li>Puissance électrique</li>
-
 <li>1 à 2 exercices rapides</li>
-
 </ul>
-
 </div>
-
 <div class="section">
-
 <h2>2. Résistances en série</h2>
-
 <p>Lorsque plusieurs résistances sont montées en série, leurs valeurs s'additionnent.</p>
-
 <div class="formule">
 
 Req = R1 + R2 + ... + Rn
 
 </div>
-
 <h3>Exercices</h3>
-
 <div class="exercice">
 
 330 Ω + 470 Ω → Calculer Req
 
 </div>
-
 <div class="exercice">
 
 100 Ω + 220 Ω + 470 Ω → Calculer Req
 
 </div>
-
 <div class="exercice">
 
 Avec U = 9 V, calculer le courant du circuit.
 
 </div>
-
 </div>
-
 <div class="section">
-
 <h2>3. Résistances en parallèle</h2>
-
 <p>Pour un montage en parallèle, on additionne les inverses.</p>
-
 <div class="formule">
 
 1 / Req = 1/R1 + 1/R2 + ... + 1/Rn
 
 </div>
-
 <p>Cas particulier de deux résistances :</p>
-
 <div class="formule">
 
 Req = (R1 × R2) / (R1 + R2)
 
 </div>
-
 <h3>Exercices</h3>
-
 <div class="exercice">
 
 330 Ω et 330 Ω
 
 </div>
-
 <div class="exercice">
 
 330 Ω et 660 Ω
 
 </div>
-
 <div class="exercice">
 
 220 Ω, 470 Ω et 1 kΩ
 
 </div>
-
 <div class="exercice">
 
 Avec U = 9 V, calculer Itotal puis I1 et I2.
 
 </div>
-
 </div>
-
 <div class="section">
-
 <h2>4. Cas mixte série – parallèle</h2>
-
 <p>
 
 Schéma :
 
 <b>R1 en série avec (R2 // R3)</b>
-
 </p>
-
-<img src="images/res_equ_mixte.png" style="height:200px; width:auto;" alt="res_equ_mixte" />
-
+<img alt="res_equ_mixte" src="images/res_equ_mixte.png" style="height:200px; width:auto;"/>
 <table>
-
 <tr>
-
 <th>Étapes</th>
-
 <th>Calcul</th>
-
 </tr>
-
 <tr>
-
 <td>Réduire le parallèle</td>
-
 <td></td>
-
 </tr>
-
 <tr>
-
 <td>Ajouter la résistance série</td>
-
 <td></td>
-
 </tr>
-
 <tr>
-
 <td>Calculer Itotal</td>
-
 <td></td>
-
 </tr>
-
 <tr>
-
 <td>Calculer I2 et I3</td>
-
 <td></td>
-
 </tr>
-
 </table>
-
 </div>
-
 <div class="synthese">
-
 <h2>📋 Synthèse</h2>
-
 <ul>
-
 <li>En série, les résistances s'additionnent.</li>
-
 <li>En parallèle, on additionne les inverses.</li>
-
 <li>Toujours simplifier le circuit avant d'appliquer la loi d'Ohm.</li>
-
 <li>Terminer par le calcul des courants dans chaque branche.</li>
-
 </ul>
-
 </div>
-
 <div class="formulaire">
-
 <h2>📌 Formulaire</h2>
-
 <ul>
-
 <li>Req = R1 + R2 + ... + Rn</li>
-
 <li>1/Req = 1/R1 + 1/R2 + ... + 1/Rn</li>
-
 <li>Cas particulier avec 2 résistances : Req = (R1 × R2)/(R1 + R2)</li>
-
 <li>U = R × I</li>
-
 </ul>
-
 </div>
-<center>
-<a href="séance_1.html">RETOUR</a>
-<a href="séance_3.html">SUIVANT</a>
-</br>
-<a href="index.html">SOMMAIRE</a>
-</center>
+
 <footer>
 
 Terminale STI2D SIN • Séquence 1 • Séance 2
 
 </footer>
-
-</div>
-
+<nav aria-label="Navigation en bas de page" class="sin-footer-nav"><a href="séance_1.html">← Séance 1</a><a class="sin-home" href="index.html">Sommaire</a><a href="séance_3.html">Séance 3 →</a></nav></div>
 </body>
 </html>
